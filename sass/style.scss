@@ -58,42 +58,90 @@ nav {
 
     .nav__rechercher {
         height: 20px;
-
         padding: 20px;
-        background: linear-gradient(var(--main-second-color), var(--main-color));
         margin-top: 15px;
         margin-bottom: 50px;
         font-weight: bold;
         border-radius: 40px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(var(--main-second-color), var(--main-color));
     }
 
-    a {
+
+    $clr-btn: #FF79DA;
+
+    .btn {
+        margin-top: 15px;
+        margin-bottom: 50px;
+        border-radius: 40px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        background-color: $clr-btn;
+        position: relative;
+        z-index: 1;
+        font-weight: bold;
         color: white;
         text-decoration: none;
+
+        &:hover {
+            & .btn__bg {
+                opacity: 0;
+
+            }
+        }
+
+        &__bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(var(--main-second-color), var(--main-color));
+            opacity: 1;
+            z-index: -1;
+            transition: opacity 250ms;
+            border-radius: 40px;
+        }
     }
 
-    h1 {
-        width: 75%;
-        text-align: center;
 
-    }
 
-    p {
-        width: 85%;
-        text-align: center;
-    }
+}
 
+h1 {
+    width: 75%;
+    text-align: center;
+
+}
+
+p {
+    width: 85%;
+    text-align: center;
+}
+
+#titre {
+    margin: 15px;
 }
 
 .titre {
     margin: 15px;
 }
 
-
 .fonctionnement {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .fonctionnement__ordre {
+        background: var(--main-color);
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        color: white;
+        text-align: center;
+        position: absolute;
+        left: 10%;
+    }
 
     .fonctionnement__boutton {
         height: 72px;
@@ -122,6 +170,8 @@ nav {
     margin-top: 30px;
     padding-bottom: 30px;
 
+
+
     .restaurants__card {
         display: grid;
         grid-template-columns: 1.8fr 0.2fr;
@@ -132,9 +182,22 @@ nav {
         margin: auto;
         margin-top: 30px;
     }
+
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: var(--main-color);
+        text-decoration: none;
+
+        transition: all 600ms;
+    }
+
+
 }
-
-
 
 .box1 {
     grid-column: 1/3;
@@ -148,7 +211,22 @@ nav {
         object-fit: cover;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+
     }
+
+    .restaurants__nouveau {
+        position: absolute;
+        right: 5%;
+        margin: 10px;
+        background-color: var(--main-tertiaire-color);
+        padding: 6px;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: var(--pins-color);
+        border-radius: 3px;
+
+    }
+
 
 }
 
@@ -169,7 +247,10 @@ nav {
     text-align: right;
     padding-top: 20px;
     padding-right: 20px;
+
 }
+
+
 
 footer {
     background-color: var(--footer-color);
@@ -177,14 +258,89 @@ footer {
     padding: 15px;
 
     a {
-
         color: white;
         text-decoration: none;
     }
+
+    a:hover {
+        color: var(--main-color);
+        transition: all 600ms;
+    }
+
 
     .footer__img {
         color: white;
         height: 20px;
         padding-bottom: 15px;
+    }
+}
+
+
+
+
+
+$clr-btn2: #FF79DA;
+
+.coeur {
+
+    color: $clr-btn2;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+
+
+    &:hover {
+        & .coeur__bg {
+            opacity: 0;
+
+
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: black;
+        opacity: 1;
+        z-index: -1;
+        transition: opacity 250ms;
+        border-radius: 40px;
+        font-weight: bold;
+    }
+}
+
+.icone_coeur {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    margin-top: 15px;
+
+    &--empty {
+        position: absolute;
+        color: black;
+    }
+
+    &--full {
+        position: absolute;
+        opacity: 0;
+        background: linear-gradient(#FF79DA, #9356DC);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: all 400ms;
+    }
+
+    &:hover &--full {
+        opacity: 1;
+
+    }
+
+    &:hover &--empty {
+        opacity: 0;
     }
 }

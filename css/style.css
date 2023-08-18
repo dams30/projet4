@@ -84,24 +84,59 @@ nav {
 nav .nav__rechercher {
   height: 20px;
   padding: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--main-second-color)), to(var(--main-color)));
-  background: linear-gradient(var(--main-second-color), var(--main-color));
   margin-top: 15px;
   margin-bottom: 50px;
   font-weight: bold;
   border-radius: 40px;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--main-second-color)), to(var(--main-color)));
+  background: linear-gradient(var(--main-second-color), var(--main-color));
 }
-nav a {
+nav .btn {
+  margin-top: 15px;
+  margin-bottom: 50px;
+  border-radius: 40px;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  background-color: #FF79DA;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
   color: white;
   text-decoration: none;
 }
-nav h1 {
+nav .btn:hover .btn__bg {
+  opacity: 0;
+}
+nav .btn__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--main-second-color)), to(var(--main-color)));
+  background: linear-gradient(var(--main-second-color), var(--main-color));
+  opacity: 1;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  border-radius: 40px;
+}
+
+h1 {
   width: 75%;
   text-align: center;
 }
-nav p {
+
+p {
   width: 85%;
   text-align: center;
+}
+
+#titre {
+  margin: 15px;
 }
 
 .titre {
@@ -119,6 +154,16 @@ nav p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.fonctionnement .fonctionnement__ordre {
+  background: var(--main-color);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  left: 10%;
 }
 .fonctionnement .fonctionnement__boutton {
   height: 72px;
@@ -187,6 +232,16 @@ nav p {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
 }
+.restaurants a {
+  color: black;
+  text-decoration: none;
+}
+.restaurants a:hover {
+  color: var(--main-color);
+  text-decoration: none;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+}
 
 .box1 {
   -ms-grid-column: 1;
@@ -205,6 +260,17 @@ nav p {
      object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+.box1 .restaurants__nouveau {
+  position: absolute;
+  right: 5%;
+  margin: 10px;
+  background-color: var(--main-tertiaire-color);
+  padding: 6px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--pins-color);
+  border-radius: 3px;
 }
 
 .box2 {
@@ -237,8 +303,73 @@ footer a {
   color: white;
   text-decoration: none;
 }
+footer a:hover {
+  color: var(--main-color);
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+}
 footer .footer__img {
   color: white;
   height: 20px;
   padding-bottom: 15px;
+}
+
+.coeur {
+  color: #FF79DA;
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+.coeur:hover .coeur__bg {
+  opacity: 0;
+}
+.coeur__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: black;
+  opacity: 1;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  border-radius: 40px;
+  font-weight: bold;
+}
+
+.icone_coeur {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+.icone_coeur--empty {
+  position: absolute;
+  color: black;
+}
+.icone_coeur--full {
+  position: absolute;
+  opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+.icone_coeur:hover .icone_coeur--full {
+  opacity: 1;
+}
+.icone_coeur:hover .icone_coeur--empty {
+  opacity: 0;
 }

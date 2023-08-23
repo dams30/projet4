@@ -8,16 +8,6 @@
   max-width: 1440px;
 }
 
-:root {
-  --main-color: #9356DC;
-  --background-color: #EAEAEA;
-  --background-second-color: #F6F6F6;
-  --main-second-color: #FF79DA;
-  --main-tertiaire-color: #99E2D0;
-  --pins-color: #7E7E7E;
-  --footer-color: #353535;
-}
-
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -105,7 +95,7 @@ header .header__location {
       -ms-flex-pack: center;
           justify-content: center;
   height: 50px;
-  background-color: var(--background-color);
+  background-color: #EAEAEA;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -134,7 +124,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: var(--background-second-color);
+  background-color: #F6F6F6;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -148,8 +138,8 @@ nav .nav__rechercher {
   border-radius: 40px;
   -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--main-second-color)), to(var(--main-color)));
-  background: linear-gradient(var(--main-second-color), var(--main-color));
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
 }
 nav .btn {
   margin-top: 15px;
@@ -174,8 +164,8 @@ nav .btn__bg {
   right: 0;
   bottom: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--main-second-color)), to(var(--main-color)));
-  background: linear-gradient(var(--main-second-color), var(--main-color));
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   opacity: 1;
   z-index: -1;
   -webkit-transition: opacity 250ms;
@@ -196,7 +186,7 @@ p {
 #titre {
   padding: 15px;
   font-size: 1.6em;
-  background-color: var(--background-second-color);
+  background-color: #F6F6F6;
 }
 
 .titre {
@@ -218,7 +208,7 @@ p {
   padding-top: 20px;
 }
 .fonctionnement .fonctionnement__ordre {
-  background: var(--main-color);
+  background: #9356DC;
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -229,7 +219,7 @@ p {
 }
 .fonctionnement .fonctionnement__boutton {
   height: 72px;
-  background-color: var(--background-second-color);
+  background-color: #F6F6F6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,18 +236,18 @@ p {
   border-radius: 20px;
 }
 .fonctionnement .fonctionnement__pins2 {
-  color: var(--pins-color);
+  color: #7E7E7E;
   padding-right: 25px;
   font-size: 1.2em;
 }
 .fonctionnement .fonctionnement__pins2--pink {
-  color: var(--main-color);
+  color: #9356DC;
   padding-right: 25px;
   font-size: 1.2em;
 }
 
 .restaurants {
-  background-color: var(--background-second-color);
+  background-color: #F6F6F6;
   padding-top: 20px;
   padding-bottom: 30px;
   display: -webkit-box;
@@ -310,7 +300,7 @@ p {
   text-decoration: none;
 }
 .restaurants a:hover {
-  color: var(--main-color);
+  color: #9356DC;
   text-decoration: none;
   -webkit-transition: all 600ms;
   transition: all 600ms;
@@ -338,12 +328,12 @@ p {
   right: -80%;
   top: -80%;
   width: 60px;
-  background-color: var(--main-tertiaire-color);
+  background-color: #99E2D0;
   border-radius: 3px;
   padding: 6px;
   font-size: 0.8em;
   font-weight: bold;
-  color: var(--pins-color);
+  color: #7E7E7E;
 }
 
 .box2 {
@@ -368,7 +358,7 @@ p {
 }
 
 footer {
-  background-color: var(--footer-color);
+  background-color: #353535;
   color: white;
   padding: 15px;
   display: -webkit-box;
@@ -384,7 +374,7 @@ footer a {
   text-decoration: none;
 }
 footer a:hover {
-  color: var(--main-color);
+  color: #9356DC;
   -webkit-transition: all 600ms;
   transition: all 600ms;
 }
@@ -460,7 +450,7 @@ footer a:hover {
 }
 
 .titre_restaurant {
-  background-color: var(--background-second-color);
+  background-color: #F6F6F6;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   height: 80px;
@@ -553,12 +543,12 @@ footer a:hover {
   font-size: 1.4em;
   text-decoration: underline;
   text-underline-offset: 12px;
-  text-decoration-color: var(--main-tertiaire-color);
+  text-decoration-color: #99E2D0;
   text-decoration-thickness: 5px;
 }
 
 .main {
-  background-color: var(--background-second-color);
+  background-color: #F6F6F6;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -678,7 +668,7 @@ footer a:hover {
   border-bottom-right-radius: 20px 20px;
   height: 100%;
   width: 70px;
-  background-color: var(--main-tertiaire-color);
+  background-color: #99E2D0;
   -webkit-transform: translateX(30px) scaleX(0);
           transform: translateX(30px) scaleX(0);
   -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0.96, 0.69, 0.85);

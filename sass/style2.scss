@@ -8,15 +8,17 @@
     max-width: 1440px;
 }
 
-:root {
-    --main-color: #9356DC;
-    --background-color: #EAEAEA;
-    --background-second-color: #F6F6F6;
-    --main-second-color: #FF79DA;
-    --main-tertiaire-color: #99E2D0;
-    --pins-color: #7E7E7E;
-    --footer-color: #353535;
-}
+// Mes variables
+
+$main-color: #9356DC;
+$background-color: #EAEAEA;
+$background-second-color: #F6F6F6;
+$main-second-color: #FF79DA;
+$main-tertiaire-color: #99E2D0;
+$pins-color: #7E7E7E;
+$footer-color: #353535;
+
+
 
 body {
     display: flex;
@@ -74,7 +76,7 @@ header {
         display: flex;
         justify-content: center;
         height: 50px;
-        background-color: var(--background-color);
+        background-color: $background-color;
         align-items: center;
         box-shadow: 0px 4px 2px -1px rgba(0, 0, 0, 0.20) inset;
     }
@@ -97,7 +99,7 @@ nav {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--background-second-color);
+    background-color: $background-second-color;
     align-items: center;
 
     .nav__rechercher {
@@ -108,7 +110,7 @@ nav {
         font-weight: bold;
         border-radius: 40px;
         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-        background: linear-gradient(var(--main-second-color), var(--main-color));
+        background: linear-gradient($main-second-color, $main-color);
     }
 
 
@@ -140,7 +142,7 @@ nav {
             right: 0;
             bottom: 0;
             left: 0;
-            background: linear-gradient(var(--main-second-color), var(--main-color));
+            background: linear-gradient($main-second-color, $main-color);
             opacity: 1;
             z-index: -1;
             transition: opacity 250ms;
@@ -166,7 +168,7 @@ p {
 #titre {
     padding: 15px;
     font-size: 1.6em;
-    background-color: var(--background-second-color);
+    background-color: $background-second-color;
 
 }
 
@@ -182,7 +184,7 @@ p {
     padding-top: 20px;
 
     .fonctionnement__ordre {
-        background: var(--main-color);
+        background: $main-color;
         border-radius: 50%;
         width: 24px;
         height: 24px;
@@ -194,7 +196,7 @@ p {
 
     .fonctionnement__boutton {
         height: 72px;
-        background-color: var(--background-second-color);
+        background-color: $background-second-color;
         display: flex;
         width: 300px;
 
@@ -207,7 +209,7 @@ p {
     }
 
     .fonctionnement__pins2 {
-        color: var(--pins-color);
+        color: $pins-color;
         padding-right: 25px;
         font-size: 1.2em;
 
@@ -215,7 +217,7 @@ p {
     }
 
     .fonctionnement__pins2--pink {
-        color: var(--main-color);
+        color: $main-color;
         padding-right: 25px;
         font-size: 1.2em;
     }
@@ -223,7 +225,7 @@ p {
 }
 
 .restaurants {
-    background-color: var(--background-second-color);
+    background-color: $background-second-color;
     padding-top: 20px;
     padding-bottom: 30px;
     display: flex;
@@ -249,7 +251,7 @@ p {
     }
 
     a:hover {
-        color: var(--main-color);
+        color: $main-color;
         text-decoration: none;
 
         transition: all 600ms;
@@ -279,12 +281,12 @@ p {
         right: -80%;
         top: -80%;
         width: 60px;
-        background-color: var(--main-tertiaire-color);
+        background-color: $main-tertiaire-color;
         border-radius: 3px;
         padding: 6px;
         font-size: 0.8em;
         font-weight: bold;
-        color: var(--pins-color);
+        color: $pins-color;
 
 
     }
@@ -315,7 +317,7 @@ p {
 
 
 footer {
-    background-color: var(--footer-color);
+    background-color: $footer-color;
     color: white;
     padding: 15px;
     display: flex;
@@ -327,7 +329,7 @@ footer {
     }
 
     a:hover {
-        color: var(--main-color);
+        color: $main-color;
         transition: all 600ms;
     }
 
@@ -394,7 +396,7 @@ $clr-btn2: #FF79DA;
     &--full {
         position: absolute;
         opacity: 0;
-        background: linear-gradient(#FF79DA, #9356DC);
+        background: linear-gradient($main-second-color, $main-color);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -416,7 +418,7 @@ $clr-btn2: #FF79DA;
 }
 
 .titre_restaurant {
-    background-color: var(--background-second-color);
+    background-color: $background-second-color;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
     height: 80px;
@@ -458,7 +460,7 @@ $clr-btn2: #FF79DA;
 .my-heart-full:hover {
     opacity: 1;
     color: transparent;
-    background-image: linear-gradient(#FF79DA, #9356DC);
+    background-image: linear-gradient($main-second-color, $main-color);
     background-clip: text;
     -webkit-background-clip: text;
 }
@@ -519,7 +521,7 @@ $clr-btn2: #FF79DA;
         font-size: 1.4em;
         text-decoration: underline;
         text-underline-offset: 12px;
-        text-decoration-color: var(--main-tertiaire-color);
+        text-decoration-color: $main-tertiaire-color;
         text-decoration-thickness: 5px;
     }
 }
@@ -527,7 +529,7 @@ $clr-btn2: #FF79DA;
 
 
 .main {
-    background-color: var(--background-second-color);
+    background-color: $background-second-color;
     justify-content: center;
 }
 
@@ -606,7 +608,7 @@ $clr-btn2: #FF79DA;
         border-bottom-right-radius: 20px 20px;
         height: 100%;
         width: 70px;
-        background-color: var(--main-tertiaire-color);
+        background-color: $main-tertiaire-color;
 
         transform: translateX(30px) scaleX(0);
         transition: transform 0.3s cubic-bezier(0, .96, .69, .85);

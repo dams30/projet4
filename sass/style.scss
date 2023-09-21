@@ -1,4 +1,17 @@
 /****** General ***********/
+@keyframes fadeinheart {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
 
 @keyframes clignoter {
     0% {
@@ -429,37 +442,6 @@ footer {
     padding-bottom: 15px;
 }
 
-.coeur {
-
-    color: $bg-btn;
-    position: relative;
-    z-index: 1;
-    font-weight: bold;
-
-
-    &:hover {
-        & .coeur__bg {
-            opacity: 0;
-
-
-        }
-    }
-
-    &__bg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        color: $black;
-        opacity: 1;
-        z-index: -1;
-        transition: opacity 250ms;
-        border-radius: 40px;
-        font-weight: bold;
-    }
-}
-
 .icone_coeur {
     position: absolute;
     display: flex;
@@ -508,7 +490,8 @@ footer {
 
     h1 {
         font-family: 'Shrikhand', cursive;
-
+        font-size: 1.5em;
+        font-weight: bold;
 
     }
 }
@@ -522,7 +505,8 @@ footer {
 .heart_position {
     padding-left: 80%;
     position: absolute;
-    top: 340px;
+    top: 320px;
+    animation: fadeinheart 2s;
 }
 
 .posi {
@@ -550,7 +534,7 @@ footer {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    height: 50px;
+    height: 40px;
     margin: 20px;
 
     a {
@@ -610,14 +594,14 @@ footer {
 
 .card_plat2 {
     display: grid;
-    grid-template-columns: 300px 50px 70px;
+    grid-template-columns: 200px 50px 70px;
     grid-template-rows: 1fr 1fr;
     background-color: $white;
     border-radius: 20px;
     height: 90px;
     box-shadow: 5px 5px 24px rgba(0, 0, 0, 0.15);
     margin: auto;
-    width: 420px;
+    width: 320px;
 
     &:hover>.card_plat2__green {
         position: relative;

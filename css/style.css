@@ -1,5 +1,27 @@
 @charset "UTF-8";
 /****** General ***********/
+@-webkit-keyframes fadeinheart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeinheart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes clignoter {
   0% {
     opacity: 1;
@@ -555,30 +577,6 @@ footer a:hover {
   padding-bottom: 15px;
 }
 
-.coeur {
-  color: #FF79DA;
-  position: relative;
-  z-index: 1;
-  font-weight: bold;
-}
-.coeur:hover .coeur__bg {
-  opacity: 0;
-}
-.coeur__bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  color: black;
-  opacity: 1;
-  z-index: -1;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
-  border-radius: 40px;
-  font-weight: bold;
-}
-
 .icone_coeur {
   position: absolute;
   display: -webkit-box;
@@ -630,6 +628,8 @@ footer a:hover {
 }
 .titre_restaurant h1 {
   font-family: "Shrikhand", cursive;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .titre_restaurant2 {
@@ -642,7 +642,9 @@ footer a:hover {
 .heart_position {
   padding-left: 80%;
   position: absolute;
-  top: 340px;
+  top: 320px;
+  -webkit-animation: fadeinheart 2s;
+          animation: fadeinheart 2s;
 }
 
 .posi {
@@ -671,7 +673,7 @@ footer a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 50px;
+  height: 40px;
   margin: 20px;
 }
 .logo a {
@@ -727,8 +729,8 @@ footer a:hover {
 .card_plat2 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 300px 50px 70px;
-  grid-template-columns: 300px 50px 70px;
+  -ms-grid-columns: 200px 50px 70px;
+  grid-template-columns: 200px 50px 70px;
   -ms-grid-rows: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   background-color: white;
@@ -737,7 +739,7 @@ footer a:hover {
   -webkit-box-shadow: 5px 5px 24px rgba(0, 0, 0, 0.15);
           box-shadow: 5px 5px 24px rgba(0, 0, 0, 0.15);
   margin: auto;
-  width: 420px;
+  width: 320px;
 }
 
 .card_plat2 > *:nth-child(1) {

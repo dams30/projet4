@@ -117,7 +117,10 @@
 
 .content {
     max-width: 1440px;
+
 }
+
+
 
 // Mes variables
 
@@ -126,7 +129,7 @@ $background-color: #EAEAEA;
 $background-second-color: #F6F6F6;
 $main-second-color: #FF79DA;
 $main-tertiaire-color: #99E2D0;
-$pins-color: #7E7E7E;
+$pins-color: #008766;
 $footer-color: #353535;
 $bg-btn: #FF79DA;
 $white: white;
@@ -141,12 +144,23 @@ $black: black;
 }
 
 body {
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto';
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 
+}
+
+.contenu {
+    animation: fadein 1s linear;
+    animation-delay: 0.8s;
+    animation-fill-mode: both;
 }
 
 .section_left {
@@ -167,6 +181,7 @@ body {
 }
 
 .section_right {
+
 
 
     &__bar {
@@ -233,7 +248,7 @@ nav {
         margin-top: 15px;
         margin-bottom: 50px;
         border-radius: 40px;
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
         padding: 20px;
         background-color: $bg-btn;
         position: relative;
@@ -256,6 +271,7 @@ nav {
             bottom: 0;
             left: 0;
             background: linear-gradient($main-second-color, $main-color);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
             opacity: 1;
             z-index: -1;
             transition: opacity 250ms;
@@ -271,11 +287,6 @@ h1 {
     width: 75%;
     text-align: center;
 
-}
-
-p {
-    width: 85%;
-    text-align: center;
 }
 
 #titre {
@@ -571,102 +582,144 @@ footer {
     background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
-.plat {
-    text-transform: uppercase;
-    padding-left: 10%;
-    padding-bottom: 40px;
-    padding-top: 30px;
 
-    h2 {
-        font-size: 1.4em;
-        text-decoration: underline;
-        text-underline-offset: 12px;
-        text-decoration-color: $main-tertiaire-color;
-        text-decoration-thickness: 5px;
-
-    }
-}
 
 .main {
     background-color: $background-second-color;
     justify-content: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
 }
 
-.card_plat2 {
-    display: grid;
-    grid-template-columns: 200px 50px 70px;
-    grid-template-rows: 1fr 1fr;
-    background-color: $white;
-    border-radius: 20px;
-    height: 90px;
-    box-shadow: 5px 5px 24px rgba(0, 0, 0, 0.15);
+.menu-categorie {
     margin: auto;
-    width: 320px;
+}
 
-    &:hover>.card_plat2__green {
-        position: relative;
-        transform: translateX(0) scaleX(1);
+.menu-categorie h2 {
+    text-transform: uppercase;
+    font-weight: 0;
+    font-size: 1.2em;
+}
 
-    }
+.entree {
+    margin-bottom: 2em;
 
-    &:hover>.card_plat2__prix {
-        position: relative;
-        transform: translateX(0);
-
-    }
-
-    .card_plat2__titre {
-
-        grid-column: 1 / 2;
+    h2 {
         padding-left: 25px;
-        height: 40px;
-
-
-        h3 {
-            font-weight: bold;
-            font-size: 1em;
-            width: 275px;
-            @include ellipsis;
-        }
     }
 
-    .card_plat2__description {
-        grid-column: 1 / 2;
-        padding: 10px;
-        padding-left: 25px;
-        @include ellipsis;
-    }
+}
 
-    .card_plat2__prix {
-        grid-row: 2 / 3;
-        grid-column: 2 / 3;
+.menu-categorie h2::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    background-color: #99E2D0;
+}
+
+.menu-card {
+    animation-fill-mode: both;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 15px 20px 0 10px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    width: 80%;
+    box-shadow: -1px 6px 10px 2px rgba(166, 166, 166, 0.34);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-card_validate {
+    position: absolute;
+    text-align: center;
+    right: -100px;
+    top: 0;
+    width: 100px;
+    height: 95px;
+    background-color: #99E2D0;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.7s ease-in-out;
+}
+
+.menu-card_validate i {
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.menu-card:hover {
+    cursor: pointer;
+}
+
+.menu-card:hover .menu-card_validate {
+    right: 0px;
+    transition: 0.7s ease-in-out;
+    z-index: 2;
+}
+
+.menu-card:hover .menu-card_validate i {
+    animation: rotate 0.2s linear;
+    animation-delay: 0.3S;
+}
+
+.menu-card_content {
+    width: 100%;
+    transition: 0.8s ease-in-out;
+}
+
+.menu-card_content:hover {
+    width: calc(100% - 100px);
+    transition: 0.7s ease-in-out;
+}
+
+.menu-card_title h3 {
+    font-family: "Roboto";
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-card_title p {
+    margin: 0;
+    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-card_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
         font-weight: bold;
-        font-size: 1.3em;
-        transform: translateX(30px);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .card_plat2__prix__check {
-        color: $white;
-        position: absolute;
-        left: 25%;
-        top: 50%;
-    }
-
-    .card_plat2__green {
-        position: relative;
-        grid-row: 1 / 3;
-        grid-column: 3 / 4;
-        border-top-right-radius: 20px 20px;
-        border-bottom-right-radius: 20px 20px;
-        height: 100%;
-        width: 70px;
-        background-color: $main-tertiaire-color;
-        transform: translateX(30px) scaleX(0);
-        transition: transform 0.3s cubic-bezier(0, .96, .69, .85);
     }
 }
 
+
+
+.menu-card_text2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+
+    p {
+        width: 50px;
+    }
+}
 
 
 
@@ -689,19 +742,14 @@ footer {
         }
     }
 
-    .card_plat2 {
-
-        grid-template-columns: 880px 50px 70px;
-        width: 1000px;
-    }
 
     .titre_restaurant {
         text-align: center;
     }
 
     .heart_position {
-        padding-left: 970px;
-        top: 540px;
+        padding-left: 670px;
+        top: 520px;
 
     }
 
@@ -797,8 +845,8 @@ footer {
     justify-content: center;
     align-items: center;
     animation: fadeout 0.2s linear;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
     animation-fill-mode: both;
-    width: 98vw;
+    width: 100%;
     height: 100vh;
 }

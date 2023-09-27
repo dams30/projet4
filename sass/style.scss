@@ -135,13 +135,6 @@ $bg-btn: #FF79DA;
 $white: white;
 $black: black;
 
-// Mes mixin
-
-@mixin ellipsis {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
 
 body {
 

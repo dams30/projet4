@@ -650,7 +650,7 @@ footer a:hover {
 }
 
 .heart_position {
-  padding-left: 80%;
+  padding-left: 60%;
   position: absolute;
   top: 320px;
   -webkit-animation: fadeinheart 2s;
@@ -886,9 +886,6 @@ footer a:hover {
   }
   .fonctionnement .fonctionnement__boutton {
     width: 300px;
-  }
-  .titre_restaurant {
-    text-align: center;
   }
   .heart_position {
     padding-left: 670px;

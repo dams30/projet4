@@ -322,6 +322,29 @@ header .header__pins {
   padding-right: 5px;
 }
 
+.btn4 {
+  background: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#ba62db));
+  background: linear-gradient(180deg, #ff79da 0%, #ba62db 100%);
+  -webkit-box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
+          box-shadow: 1px 11px 14px 0px rgba(130, 130, 130, 0.38);
+  padding: 20px;
+  color: #FFF;
+  font-family: "Roboto";
+  text-decoration: none;
+  border-radius: 50px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  margin-bottom: 20px;
+}
+
+.btn4:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff99e2), to(#dc7bff));
+  background: linear-gradient(180deg, #ff99e2 0%, #dc7bff 100%);
+  -webkit-box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
+          box-shadow: 1px 11px 14px 0px rgba(109, 109, 109, 0.699);
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -348,39 +371,6 @@ nav .nav__rechercher {
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
-}
-nav .btn {
-  margin-top: 15px;
-  margin-bottom: 50px;
-  border-radius: 40px;
-  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  background-color: #FF79DA;
-  position: relative;
-  z-index: 1;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-nav .btn:hover .btn__bg {
-  opacity: 0;
-}
-nav .btn__bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  z-index: -1;
-  -webkit-transition: opacity 250ms;
-  transition: opacity 250ms;
-  border-radius: 40px;
 }
 
 h1 {
